@@ -7,6 +7,7 @@ $( document ).ready(function() {
         $('#menu-items').css('padding','2rem');
         $('#menu-items').css('padding','2rem');
         $('#menu-items').css('align-items','baseline');
+        $('#menu-items').css('z-index','11');
 
         $('#burger-menu').css('display','none');
         $('#close-logo').css('display','flex');
@@ -111,28 +112,18 @@ $( document ).ready(function() {
 
     })
 
-
-    // $('.slider__blocks_family').slick({
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3,
-    //     arrows: false,
-    //
-    // });
-    //
-    // $('.event__blocks').slick({
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3,
-    //     arrows: false,
-    //
-    // });
-
     $('.button-left').click(function (){
-        $('.carousel-item').carousel(prev);
+        $('.owl-carousel__family').owlCarousel('prev');
     });
     $('.button-right').click(function (){
-        $('.carousel-item').carousel(next);
+        $('.owl-carousel__family ').owlCarousel('next');
+    });
+
+    $('.button-left-events').click(function (){
+        $('.owl-carousel__events').owlCarousel('prev');
+    });
+    $('.button-right-events').click(function (){
+        $('.owl-carousel__events').owlCarousel('next');
     });
 
     // $('.button-left').click(function (){
@@ -143,6 +134,27 @@ $( document ).ready(function() {
     // });
 
 
+    const eventsRightBtn = document.querySelector(".button-right");
+    const eventsLeftBtn = document.querySelector(".button-left"); //.for-family__sliders
+
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
 
     });
+
+});
 
