@@ -15,5 +15,6 @@
     <orderEntry type="library" name="jquery.fancybox" level="application" />
     <orderEntry type="library" name="validate" level="application" />
     <orderEntry type="library" name="bootstrap-slider" level="application" />
+    <orderEntry type="library" name="OwlCarousel2" level="application" />
   </component>
 </module>
